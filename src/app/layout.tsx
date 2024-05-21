@@ -29,6 +29,7 @@ export default function RootLayout({
    <h2>Peak Mindset </h2>
 
     </nav>
+    <h1> Welcome to Peak Mindset</h1>
         {children}
         <footer className="footer-layout">
           <h4>Copyright &copy; 2023 Peak Mindset   

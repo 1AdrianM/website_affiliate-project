@@ -1,102 +1,158 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: 'Roboto', sans-serif;
-  background-color:#242833;
+  background-color: #242833;
 }
-.container{
-    font-family: Roboto;
- font-size: 1rem;
+
+.container {
+  font-size: 1rem;
 }
-.row{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin:5rem;
-    gap: 0.5rem;
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5rem;
+  gap: 0.5rem;
 }
-.footer-layout{
-  display:flex;
+
+.footer-layout {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color:white;
+  color: white;
   font-size: 1rem;
-  height:2rem;
-  background-color:black ;
+  height: 2rem;
+  width: 100vw;
+  background-color: black;
 }
-.navbar  h2{
 
+.navbar h2 {
   font-size: 1.25rem;
   color: yellow;
-
 }
-.navbar svg{
+
+.navbar svg {
   color: yellow;
   font-size: 1.5rem;
   margin-left: 20px;
   margin-right: 8px;
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-decoration:none;
   height: 3rem;
   background-color: black;
   color: white;
-
- 
+  width: 100vw;
 }
-.navbar li{
+
+.navbar li {
   display: inline-block;
   list-style: none;
-  text-decoration:none;
 }
-.navbar ul li :visited { text-decoration: none; color:white ; }
 
-.column{
+.navbar ul li:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.column {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  padding:1rem;
+  padding: 1rem;
   text-align: center;
-align-items :center; 
-  gap:1rem;
-  color: white; 
+  align-items: center;
+  gap: 1rem;
+  color: white;
   background-color: #353743;
   height: 15rem;
 }
+
 .column h3 {
   font-size: 1rem;
 }
-.column img{
-  object-fit:contain;
-  width:130px;
+
+.column img {
+  object-fit: contain;
+  width: 130px;
   border: 2.8px solid yellow;
   border-radius: 5%;
 }
-.column svg{
+
+.column svg {
   padding-left: 0.6rem;
-  font-size: 1,25rem;
-  color:yellow;
+  font-size: 1.25rem;
+  color: yellow;
   display: inline-block;
   transform: translateX(20%);
   transition: 1s;
 }
-.column svg:hover{
+
+.column svg:hover {
   transform: translateX(50%);
-
 }
-p{
+
+p {
   font-size: 0.8rem;
-
 }
-p:hover{
+
+p:hover {
   color: radial-gradient(#fc466b, #7857d0, #3f5efb);
+}
+.body--container h1{
+
+color: white;  
+display:flex;
+justify-content: center;
+align-items:center;
+padding-top:2rem;
+}
+@media screen and (max-width: 1024px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+    margin: 2rem;
+  }
+
+  .navbar h2 {
+    font-size: 1rem;
+  }
+
+  .navbar svg {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+
+  .navbar h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .column {
+    height: auto;
+  }
 }
