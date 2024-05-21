@@ -30,7 +30,7 @@ return(
         </p>
       </div>
       <div className="column">
-      <img src='Ap.png' alt='Alpha Mindset book image'/>
+      <img src='Ap.jpg' alt='Alpha Mindset book image'/>
 
       <h3>Alpha-Mindset Guide
 
@@ -42,7 +42,7 @@ return(
         </p>
       </div>
       <div className="column">
-      <img src='med.png' alt='Marcus Aurelios Meditations image'/>
+      <img src='med.jpg' alt='Marcus Aurelios Meditations image'/>
 
 <h3> Marcus Aurelios - Meditations
           </h3>
