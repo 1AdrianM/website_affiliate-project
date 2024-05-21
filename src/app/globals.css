@@ -17,20 +17,39 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     margin:5rem;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
-.navbar  h1{
+.footer-layout{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 1rem;
+  height:2rem;
+  background-color:black ;
+}
+.navbar  h2{
 
-  font-size: 2rem;
+  font-size: 1.25rem;
+  color: yellow;
+
+}
+.navbar svg{
+  color: yellow;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-right: 8px;
 }
 .navbar{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   text-decoration:none;
+  height: 3rem;
+  background-color: black;
   color: white;
-  height: 4rem;
-  background-color:#242833;
+
  
 }
 .navbar li{
@@ -42,31 +61,42 @@ body{
 
 .column{
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   padding:1rem;
   text-align: center;
 align-items :center; 
-  gap:3rem;
+  gap:1rem;
   color: white; 
   background-color: #353743;
-  height: 14rem;
+  height: 15rem;
 }
-.column div :hover{
-  background-color: #353743;
+.column h3 {
+  font-size: 1rem;
 }
 .column img{
-  object-fit:contain
+  object-fit:contain;
+  width:130px;
+  border: 2.8px solid yellow;
+  border-radius: 5%;
 }
-svg{
+.column svg{
   padding-left: 0.6rem;
-  font-size: 1rem;
-  color:white;
+  font-size: 1,25rem;
+  color:yellow;
   display: inline-block;
   transform: translateX(20%);
   transition: 1s;
 }
-svg:hover{
+.column svg:hover{
   transform: translateX(50%);
 
+}
+p{
+  font-size: 0.8rem;
+
+}
+p:hover{
+  color: radial-gradient(#fc466b, #7857d0, #3f5efb);
 }
