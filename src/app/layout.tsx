@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { config } from '@fortawesome/fontawesome-svg-core'
+
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +13,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Peak Mindset",
   description: "Created to Promote Self improvements in all its aspects",
+
+icons: [
+  {
+    rel:"icon",
+    type:"image/png",
+    url:'/rocket-lunch.png'
+
+}]
 };
 
 export default function RootLayout({
@@ -22,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      
       <body className="body--container">
     <nav className="navbar">
       <FontAwesomeIcon icon={faHome} href="#"/>
@@ -31,6 +39,7 @@ export default function RootLayout({
     </nav>
     <h1> Welcome to Peak Mindset</h1>
         {children}
+        
         <footer className="footer-layout">
           <h4>Copyright &copy; 2023 Peak Mindset   
           </h4>
