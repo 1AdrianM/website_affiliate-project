@@ -2,23 +2,36 @@
 import './page.module.css'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { posts } from '@/postArray';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-export default function Home() {
-  
+import Image from 'next/image';
+
+export default function Home(){
+
 return(
 <main>
   <div className="container">
     <div className="row">
-      <div className="column">
+    {posts.map(post =>(
+    <div key={post.id} className="column">
+   
+     <Image src={post.img} width={130} height={130} alt={post.id.toString()} />
+      <h3 key={post.id}>{post.title}</h3>
+      <p>{post.descr_link}
+        <Link href={post.href}target='_blank'>
+          <FontAwesomeIcon className="icon" icon={faArrowRight} />
+        </Link>
+      </p>
+</div>
+))}
+    
 
-        <h3>Unlock your best skin yet: Discover the powe of tiege hanley skincare routines</h3>
-        <p>Tiege Hanley
-          <Link href='https://www.google.com/' target='_blank'>
-            <FontAwesomeIcon className="icon" icon={faArrowRight}/>
-            </Link>
-        </p>
-      </div>
-      <div className="column">
+    </div>
+  </div>
+</main>  
+  );
+}
+    {/*  <div className="column">
   <h3>Elevate Your Exercise Routine</h3>
         <p>Try Cap Barbell Adjustable Weighted Vest
           <Link href='https://www.google.com/' target='_blank'> 
@@ -45,15 +58,4 @@ return(
             </Link>
         </p>
       </div>
-
-    </div>
-  </div>
-</main>
-  
-  
-  
-  
-  
-  
-  );
-}
+*/}
