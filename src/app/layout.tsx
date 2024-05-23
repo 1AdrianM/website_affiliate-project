@@ -9,6 +9,7 @@ import "./globals.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Peak Mindset",
@@ -39,7 +40,7 @@ export default function RootLayout({
     </nav>
     <h1> Welcome to Peak Mindset</h1>
         {children}
-        <GoogleAnalytics gaId="GTM-M7DQ4TSH"/>
+        <Analytics/>
         <footer className="footer-layout">
           <h4>Copyright &copy; 2023 Peak Mindset   
           </h4>
