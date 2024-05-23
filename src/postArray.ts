@@ -8,7 +8,7 @@ interface Post{
 
 export const posts:Post[] = [{
     id: 1,
-    img: "/piel.jpg",
+    img: "/pielhermosa2.jpg",
     href: "https://amzn.to/3yugavr",
     title: "Palmer's Manteca de Cacao Terapia de Aceite para la piel, 1 onza",
     descr_link: "Cliquea Aqui para ver el Producto"
@@ -37,7 +37,7 @@ export const posts:Post[] = [{
     id: 5,
     href: "https://amzn.to/4bN2VUW",
     title: "Elevate Your Exercise Routine",
-    descr_link: "Try Cap Barbell Adjustable Weighted Vest",
+    descr_link: "Try Cap Barbell Adjustable Weighted Vest ",
     img: "/vest.webp"
 },
 {
