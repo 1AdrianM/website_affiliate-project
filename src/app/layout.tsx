@@ -4,11 +4,11 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 import "./globals.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const inter = Inter({ subsets: ["latin"] });
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Peak Mindset",
@@ -33,13 +33,13 @@ export default function RootLayout({
      
       <body className="body--container">
     <nav className="navbar">
-      <FontAwesomeIcon icon={faHome} href="#"/>
+      <FontAwesomeIcon icon={faDumbbell} href="#"/>
    <h2>Peak Mindset </h2>
 
     </nav>
     <h1> Welcome to Peak Mindset</h1>
         {children}
-        
+        <GoogleAnalytics gaId="GTM-M7DQ4TSH"/>
         <footer className="footer-layout">
           <h4>Copyright &copy; 2023 Peak Mindset   
           </h4>
